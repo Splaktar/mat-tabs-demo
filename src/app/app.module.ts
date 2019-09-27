@@ -16,10 +16,7 @@ import { Router } from '@angular/router';
     BrowserModule, BrowserAnimationsModule, DemoModule,
     AppRoutingModule // This should be last parameter
   ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [],
-  exports: []
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   // Diagnostic only: inspect router configuration

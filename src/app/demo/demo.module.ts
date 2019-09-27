@@ -9,7 +9,8 @@ import { PageComponent } from './page/page.component';
 @NgModule({
   declarations: [PageComponent],
   imports: [
-    DemoRoutingModule, SharedModule
+    SharedModule,
+    DemoRoutingModule
   ]
 })
 export class DemoModule {}

@@ -22,7 +22,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
           <mat-checkbox #selectAfterAdding> Select tab after adding</mat-checkbox>
         </div>
         <!--[selectedIndex]="selected.value"-->
-        <mat-tab-group [selectedIndex]="1"
+        <mat-tab-group [selectedIndex]="selectedControl.value"
                        (selectedIndexChange)="selectedControl.setValue($event)">
           <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
             Contents for {{tab}} tab
