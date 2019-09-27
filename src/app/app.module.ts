@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MatdemoModule } from './matdemo/matdemo.module';
+import { DemoModule } from './demo/demo.module';
 
 import { Router } from '@angular/router';
 
@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
     AppComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MatdemoModule, AppRoutingModule // This should be last paramater
+    BrowserModule, BrowserAnimationsModule, DemoModule,
+    AppRoutingModule // This should be last parameter
   ],
   providers: [],
   bootstrap: [AppComponent],

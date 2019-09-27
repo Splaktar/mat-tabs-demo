@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router, RouterEvent, NavigationStart, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +6,5 @@ import { Router, RouterEvent, NavigationStart, NavigationEnd } from '@angular/ro
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(router: Router) {
-  }
+  constructor() {}
 }

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MATPageComponent } from './matdemo/matpage/matpage.component';
+import { PageComponent } from './demo/page/page.component';
 
 const routes: Routes = [
-  { path: '**', component: MATPageComponent }
+  { path: '**', component: PageComponent }
 ];
 
 @NgModule({
