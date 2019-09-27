@@ -23,7 +23,7 @@ import { TabsComponent } from './tabs/tabs.component';
   ],
   exports: [
     FormsModule, ReactiveFormsModule, HttpClientModule, CommonModule, MatFormFieldModule,
-    MatCheckboxModule, MatTabsModule, MatButtonModule, MatInputModule
+    MatCheckboxModule, MatTabsModule, MatButtonModule, MatInputModule, TabsComponent
   ],
   providers: [],
   bootstrap: [],

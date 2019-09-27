@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-mat',
+  selector: 'app-tabs',
   template: `
-    <form>
+    <form [formGroup]="form">
       <div class="sectionTabDiv">
         <div>
           <span class="example-input-label"> Selected tab index: </span>
           <mat-form-field>
-            <input matInput type="number" [formControl]="selected">
+            <input matInput type="number" [formControl]="selectedControl">
           </mat-form-field>
         </div>
 
@@ -23,7 +23,7 @@ import { FormControl } from '@angular/forms';
         </div>
         <!--[selectedIndex]="selected.value"-->
         <mat-tab-group [selectedIndex]="1"
-                       (selectedIndexChange)="selected.setValue($event)">
+                       (selectedIndexChange)="selectedControl.setValue($event)">
           <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
             Contents for {{tab}} tab
 
@@ -41,15 +41,20 @@ import { FormControl } from '@angular/forms';
 })
 export class TabsComponent {
   tabs = ['First', 'Second', 'Third'];
-  selected = new FormControl(0);
+  selectedControl = new FormControl(0);
+  form: FormGroup;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {
+    this.form = fb.group({
+      selected: this.selectedControl
+    });
+  }
 
   addTab(selectAfterAdding: boolean) {
     this.tabs.push('New');
 
     if (selectAfterAdding) {
-      this.selected.setValue(this.tabs.length - 1);
+      this.selectedControl.setValue(this.tabs.length - 1);
     }
   }
 
