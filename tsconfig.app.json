@@ -5,7 +5,9 @@
     "types": []
   },
   "angularCompilerOptions": {
-    "enableIvy": true
+    "enableIvy": true,
+    "fullTemplateTypeCheck": false,
+    "strictInjectionParameters": false
   },
   "exclude": [
     "src/test.ts",
